@@ -13,7 +13,7 @@ public class PlayerRespawn : MonoBehaviour
     }
 
     public void GameOver() {
-        SceneManager.LoadScene(7);
+       SceneManager.LoadScene(7);
     }
 
     public void GameWin() {
@@ -30,6 +30,7 @@ public class PlayerRespawn : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Log - Checkpoint: Trigger checkpoint");
         if (collision.gameObject.tag == "Checkpoint")
         {
             currentCheckpoint = collision.transform;
